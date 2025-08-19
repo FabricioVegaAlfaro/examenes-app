@@ -7,7 +7,7 @@ export const crearToken = async (req: Request, res: Response) => {
   const { expiracionMinutos, observaciones } = req.body as { expiracionMinutos?: number; observaciones?: string };
   const creado_por = req.instructorId!;
 
-  const codigo = generateTokenCode(8);
+  const codigo = generateTokenCode(5);
   const fecha_expiracion = expiracionMinutos ? `now() + interval '${expiracionMinutos} minutes'` : null;
 
   const insert = `
