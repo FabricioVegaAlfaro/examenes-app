@@ -30,7 +30,7 @@ export const crearToken = async (req: Request, res: Response) => {
   }
   if (!row) return res.status(500).json({ error: 'No se pudo crear token' });
 
-  const shareText = encodeURIComponent(`Token de examen: ${row.codigo_token}`);
+  const shareText = encodeURIComponent(`Ingresa al siguiente sitio web para realizar el examen: https://frontend-examenes.onrender.com\n\n❗*IMPORTANTE*❗\nPara poder comernzarlo coloca tu *nombre completo* tal y como está en la cédula y el *token* que te estoy compartiendo a continuación.\n\nToken de examen: ${row.codigo_token}`);
   const whatsappUrl = `https://wa.me/?text=${shareText}`;
   res.status(201).json({ token: row.codigo_token, vence: row.fecha_expiracion, whatsappUrl });
 };
