@@ -1,0 +1,1 @@
+// Puedes extender tipos aquí si lo necesitas.
