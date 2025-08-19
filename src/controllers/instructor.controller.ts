@@ -35,13 +35,15 @@ export const crearToken = async (req: Request, res: Response) => {
 
 Por favor sigue estas instrucciones para hacer tu examen de *MANIPULACIÓN DE ALIMENTOS*:
 
-*1.* Ingresa al sitio web: https://frontend-examenes.onrender.com/usuario
+*1.* Ingresa al sitio web: https://frontend-examenes.onrender.com
 
-*2.* Escribe tu *NOMBRE COMPLETO* exactamente como aparece en tu cédula.
+*2.* Presiona en el botón de "Soy Usuario".
 
-*3.* Coloca el siguiente *TOKEN* para poder iniciar el examen:
+*3.* Escribe tu *NOMBRE COMPLETO* exactamente como aparece en tu cédula.
 
-- Token de examen: ${row.codigo_token}
+*4.* Coloca el siguiente *TOKEN* para poder iniciar el examen:
+
+*-* Token de examen: ${row.codigo_token}
 
 ¡Mucho éxito!`
   );
